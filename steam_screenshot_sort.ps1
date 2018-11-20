@@ -1,6 +1,6 @@
 $config = @{
-    screenshot_folder = "$env:USERPROFILE\Pictures\Steam"
-    output_folder = "$env:USERPROFILE\Pictures\Steam"
+    screenshot_folder = Convert-Path .
+    output_folder = $screenshot_folder
     steam_api = "https://api.steampowered.com/ISteamApps/GetAppList/v0002/"
     cache_file = "steam_games.json"
 }
