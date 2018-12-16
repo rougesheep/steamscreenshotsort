@@ -19,7 +19,7 @@ if (-not (Test-Path $config['cache_file'])) {
 
 $catalog = Get-Content -Encoding UTF8 -Raw -Path $config['cache_file'] | ConvertFrom-Json
 
-$files = Get-ChildItem $config['screenshot_folder'] -Filter *.png | Select-Object -ExpandProperty Name
+$files = Get-ChildItem $config['screenshot_folder'] | Where-Object Extension -in '.png', '.jpg' | Select-Object -ExpandProperty Name
 
 ForEach($file in $files ){
     $appID = $file.Split('_')[0]
