@@ -33,6 +33,14 @@ This uses a local cache of Steams game catalog. When a new game comes out you ne
 
 There's a config hash at the top of the script. You can change the paths there if you want. It defaults to the folder it's run from (or where you set Start In to on the shortcut)
 
+## Custom Games
+
+Non-Steam games obviously don't exist in Steam's game database. To categorise them create a `custom_games.json` file. Should look something like this:
+
+```
+{"applist":{"apps":[{"appid":13719640941063569408,"name":"Clone Hero"}]}}
+```
+
 ## To-Do
 
 * Test bad file names
